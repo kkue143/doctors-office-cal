@@ -1,0 +1,29 @@
+{
+    "users": [ 
+        {
+            "id": 0, 
+            "username": "Mad",
+            "password": "pass1",
+            "doctor": false
+        },
+        {
+            "id": 0, 
+            "username": "Dav",
+            "password": "pass2",
+            "doctor": false
+        }
+    ],
+    "appointments": [
+        {
+            "doctorId": 1,
+            "patientId": null, 
+            "date": "2022-11-30",
+            "slot": 0
+        },
+        {   "doctorId": 1,
+        "patientId": 0, 
+        "date": "2022-11-30",
+        "slot": 1
+        }
+    ]
+}
