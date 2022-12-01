@@ -70,7 +70,7 @@ export class UiService {
 
     slot--
 
-    if (slot < 0 || slot > 8 || slot % 1 !== 0) {
+    if (slot < 0 || slot > 8 || Math.floor(slot) !== slot) {
       this.showError('This slot is invalid')
       return
     }
