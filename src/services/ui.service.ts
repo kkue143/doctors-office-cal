@@ -121,7 +121,8 @@ export class UiService {
 
   private loginSuccess(user: User): void {
     this.showLogin = false
-    this.userId = user.id
+    this.showRegister = false
+    this.userId = user.id 
     this.username = user.username
     this.doctor = user.doctor
     localStorage.setItem("username", user.username)
@@ -158,10 +159,8 @@ export class UiService {
         next :users => {
           if (users.length !== 1) {
             this.showError('Invalid Username and/or Password.')
-          }
-
-            this.loginSuccess(users[0])
-
+          } else {
+            this.loginSuccess(users[0])}
         },
         error: err => this.showError('Oops, something went wrong!')
     })
