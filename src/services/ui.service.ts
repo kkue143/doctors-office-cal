@@ -168,7 +168,6 @@ export class UiService {
   }
 
   public logout(): void {
-
   this.showRegister = false 
   this.showLogin = true
   this.loading = false 
