@@ -11,6 +11,7 @@ import { Appointment } from 'src/Appointment';
   providedIn: 'root'
 })
 export class UiService {
+
   private showRegister = false 
   private showLogin = true
   private loading = false 
@@ -103,6 +104,19 @@ export class UiService {
     })
   }
 
+  public deleteAppt(id: number): void {
+    this.http.delete(`http://localhost:3000/appointments/${id}`)
+    .pipe(take(1))
+    .subscribe ({
+      next: () => {
+        this.loadAppointments()
+      },
+      error: () => {
+        this.showError('Oops, something went wrong!')
+      }
+    })
+  }
+
   public startRegister(): void {
     this.showRegister = true
     this.showLogin = false
@@ -178,4 +192,11 @@ export class UiService {
   localStorage.clear
 }
 
+getAvailableAppts(): any {
+  throw new Error('Method not implemented.');
+  }
+
+getPatientBookedAppts(): any {
+  throw new Error('Method not implemented.');
+  }
 }

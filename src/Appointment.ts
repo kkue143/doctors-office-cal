@@ -1,6 +1,6 @@
 export class Appointment {
-    public id: number| null = null
-    constructor (
+    constructor ( 
+    public id: number,
     public  doctorId: number,
     public patientId: number | null, 
     public date: Date,

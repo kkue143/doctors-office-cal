@@ -23,7 +23,8 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
 import { DoctorComponent } from './component/doctor/doctor.component';
 import { AppointmentComponent } from './component/appointment/appointment.component';
-import { NewAppointmentComponent } from './component/new-appointment/new-appointment.component'
+import { NewAppointmentComponent } from './component/new-appointment/new-appointment.component';
+import { PatientComponent } from './component/patient/patient.component'
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { NewAppointmentComponent } from './component/new-appointment/new-appoint
     HeaderComponent,
     DoctorComponent,
     AppointmentComponent,
-    NewAppointmentComponent
+    NewAppointmentComponent,
+    PatientComponent
   ],
   imports: [
     BrowserModule,

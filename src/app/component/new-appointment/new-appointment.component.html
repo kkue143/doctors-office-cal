@@ -2,7 +2,6 @@
     <mat-card-header>
         <mat-card-title>Available</mat-card-title>
     </mat-card-header>
-        <mat-card-subtitle class="small">
             <mat-form-field appearance="fill" class="small">
                 <input matInput [matDatepicker]="picker" [(ngModel)]="date">
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -13,7 +12,6 @@
                   {{s}}
                 </mat-option>
               </mat-select>
-        </mat-card-subtitle>
     <mat-card-actions align="end">
         <button mat-button color="basic" (click)="ui.newApp(date, slot)"><mat-icon>check</mat-icon></button>
         <button mat-button color="warn" (click)="ui.stopNewApp()"><mat-icon>cancel</mat-icon></button>
